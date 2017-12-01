@@ -8,7 +8,7 @@ const accessFile = promisify(fs.access);
 export class FileSystem{
     constructor(private logger: Logger) {}
 
-    public async fileExists(file: string){
+    public async exists(file: string){
         try {
             await accessFile(file, fs.constants.F_OK | fs.constants.R_OK);
             return true;

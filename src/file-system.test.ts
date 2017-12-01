@@ -4,12 +4,12 @@ import * as path from 'path';
 
 test('check if file exists', async () => {
     const fileSystem = new FileSystem(new Logger());
-    const exists = await fileSystem.fileExists(path.resolve(__dirname, '../', 'package.json'));
+    const exists = await fileSystem.exists(path.resolve(__dirname, '../', 'package.json'));
     expect(exists).toBe(true);
 });
 
 test('check if file doesnt exist', async () => {
     const fileSystem = new FileSystem(new Logger());
-    const exists = await fileSystem.fileExists(path.resolve(__dirname, '../', 'nonexistentfile.xyz'));
+    const exists = await fileSystem.exists(path.resolve(__dirname, '../', 'nonexistentfile.xyz'));
     expect(exists).toBe(false);
 });

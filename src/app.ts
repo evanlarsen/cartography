@@ -13,7 +13,9 @@ export class App{
 
     public async run(stateCode: StateCodes){
         const cartographicZipFileName = this.fileCatalog.getCartographicBoundaryFile(stateCode);
-        
+        if (this.fileSystem.exists(cartographicZipFileName)){
+            
+        }
     }
 }
 
