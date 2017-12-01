@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
@@ -17,11 +17,12 @@
     "shapefile": "0.6.6"
   },
   "devDependencies": {
-    "@types/d3": "4.12.0",
     "@types/d3-geo": "1.9.4",
+    "@types/jest": "21.1.8",
     "@types/node": "8.0.53",
     "@types/node-fetch": "1.6.7",
     "@types/shapefile": "0.5.2",
-    "@types/topojson": "3.0.2"
+    "@types/topojson": "3.0.2",
+    "jest": "21.2.1"
   }
 }
