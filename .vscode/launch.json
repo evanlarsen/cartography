@@ -14,8 +14,15 @@
             "internalConsoleOptions": "openOnSessionStart",
             "outFiles": [
                 "${workspaceFolder}/dist/**/*.js"
-            ],
+            ]
             //"envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "run",
+            "program": "${workspaceFolder}\\dist\\index.js",
+            "internalConsoleOptions": "openOnSessionStart"
         }
     ]
 }

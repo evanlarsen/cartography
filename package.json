@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node dist/index",
+    "pretest": "tsc",
+    "prestart": "tsc"
   },
   "author": "",
   "license": "ISC",
@@ -12,17 +15,21 @@
     "adm-zip": "0.4.7",
     "d3": "4.12.0",
     "d3-geo-projection": "2.3.1",
+    "mkdirp": "0.5.1",
     "ndjson-cli": "0.3.1",
     "node-fetch": "1.7.3",
-    "shapefile": "0.6.6"
+    "shapefile": "0.6.6",
+    "unzip": "0.1.11"
   },
   "devDependencies": {
     "@types/d3-geo": "1.9.4",
     "@types/jest": "21.1.8",
+    "@types/mkdirp": "0.5.2",
     "@types/node": "8.0.53",
     "@types/node-fetch": "1.6.7",
     "@types/shapefile": "0.5.2",
     "@types/topojson": "3.0.2",
+    "@types/unzip": "0.1.0",
     "jest": "21.2.1"
   }
 }

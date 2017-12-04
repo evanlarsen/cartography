@@ -1,9 +1,13 @@
 import * as fs from 'fs';
 import { promisify } from 'util';
 import { Logger } from './logger';
+import * as path from 'path';
+import * as mkdirp from 'mkdirp';
 
 const readFile = promisify(fs.readFile);
 const accessFile = promisify(fs.access);
+const writeFile = promisify(fs.writeFile);
+const makeDir = promisify(mkdirp);
 
 export class FileSystem{
     constructor(private logger: Logger) {}
@@ -19,5 +23,10 @@ export class FileSystem{
 
     public async get(file: string){
         return await readFile(file);
+    }
+
+    public async save(filePath: string, file: Buffer){
+        await makeDir(path.dirname(filePath));
+        return await writeFile(filePath, file);
     }
 }
