@@ -19,7 +19,8 @@ export class App{
         const folderPath = this.fileCatalog.getFolderPath(stateCode);
         const zipFilePath = this.fileCatalog.getCartographicBoundaryFile(stateCode);
         const zipFile = await this.getCartographicBoundaryFile(zipFilePath, stateCode);
-        this.zip.unzip(zipFilePath, folderPath);
+        const files = await this.zip.unzip(zipFile, folderPath);
+        console.log(files);
     }
 
     private async getCartographicBoundaryFile(zipFilePath: string, stateCode: StateCodes){

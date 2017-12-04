@@ -18,10 +18,10 @@
     "mkdirp": "0.5.1",
     "ndjson-cli": "0.3.1",
     "node-fetch": "1.7.3",
-    "shapefile": "0.6.6",
-    "unzip": "0.1.11"
+    "shapefile": "0.6.6"
   },
   "devDependencies": {
+    "@types/adm-zip": "0.4.31",
     "@types/d3-geo": "1.9.4",
     "@types/jest": "21.1.8",
     "@types/mkdirp": "0.5.2",
@@ -29,7 +29,6 @@
     "@types/node-fetch": "1.6.7",
     "@types/shapefile": "0.5.2",
     "@types/topojson": "3.0.2",
-    "@types/unzip": "0.1.0",
     "jest": "21.2.1"
   }
 }
