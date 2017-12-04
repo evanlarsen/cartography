@@ -14,4 +14,8 @@ export class FileCatalog{
         const zipFile =  `cb_2014_${stateCode}_tract_500k.zip`;
         return path.resolve(__dirname, storage, stateCode, zipFile);
     }
+
+    public getGeoJsonPath(stateCode: StateCodes, shapeFileName: string){
+        return path.resolve(this.getFolderPath(stateCode), shapeFileName);
+    }
 }

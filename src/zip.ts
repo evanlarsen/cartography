@@ -2,8 +2,6 @@ import * as AdmZip from 'adm-zip';
 import * as fs from 'fs';
 import { promisify } from 'util';
 
-
-
 export class Zip{
     public unzip(file: Buffer, outPath: string): Promise<string[]>{
         return new Promise((resolve, reject) =>{

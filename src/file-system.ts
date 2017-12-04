@@ -21,12 +21,16 @@ export class FileSystem{
         }
     }
 
-    public async get(file: string){
-        return await readFile(file);
+    public get(file: string){
+        return readFile(file);
     }
 
     public async save(filePath: string, file: Buffer){
         await makeDir(path.dirname(filePath));
-        return await writeFile(filePath, file);
+        return writeFile(filePath, file);
+    }
+
+    public saveJson(filePath: string, json: any){
+        return writeFile(filePath, json);
     }
 }
