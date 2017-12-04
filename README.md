@@ -13,9 +13,8 @@ And you need TypeScript installed: `npm i -g typescript`
 
 1. Clone this project: `git clone https://github.com/evanlarsen/cartography`
 2. Go into the project directory: `cd cartography`
-3. Run `npm install`
-4. Build the project: `tsc`
-5. ... still working on the running part
+3. Install dependencies `npm install`
+4. Build & Run `npm start`
 
 ## Running the Tests
 
